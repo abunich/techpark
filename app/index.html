@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Auth</title>
+    <link rel="stylesheet" href="css/main.css"> 
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <main class="auth-wrap ">
+      <div id="auth-login" class="auth-login" id="auth-login">
+        Войти
+      </div>
+      <div id="auth-block" class="auth-block auth-wrap_db-none">
+        <section class="auth-block__form auth-block__form_padding">
+          <div id="auth-block-close" class="auth-block__close-btn">
+            <span class="auth-block__close-btn-shape">x</span>
+          </div>
+          <div class="auth-block__avatar-wrap">
+            <div class="auth-block__avatar">
+              <img src="img/avatar.png">
+            </div>
+          </div>
+          <div class="auth-block__input">
+            <form id="auth-input "method="post" class="auth-block__form-wrap">
+              <div class="auth-block__input-elem-wrap">
+                <span class="auth-block__input-elem-icon"><img src="img/input-ava-icon.png"/></span>
+                <input type="text" name="e-mail" id="e-mail" class="auth-block__input-elem"/>
+              </div>
+              <div class="auth-block__input-elem-wrap">
+                <span class="auth-block__input-elem-icon"><img src="img/input-key-icon.png"/></span>
+                <input type="password" name="password" id="password" class="auth-block__input-elem auth-block__input-elem_last-child" />
+              </div>
+              <a class="auth-block__link" href="#">Forgot your password?</a>
+            </form>
+          </div>
+          <div class="auth-block__send">
+            <div class="auth-block__remember">
+              <input type="checkbox" id="checkbox" class="auth-block__checkbox">
+              <label for="checkbox" class="auth-block__checkbox-label">Remember?</label>
+            </div>
+            <button type="submit" id="send-btn" class="auth-block__button" disabled>Sign in</button>
+          </div>
+        </section>
+        <section class="auth-block__register">
+          <div class="auth-block__register-text">
+            Not a registered user yet?  <a class="auth-block__link auth-block__link_register-link" href="#">Sign up now!</a>
+          </div>
+        </section>    
+      </div>
+    </main>
+</body>
+</html>

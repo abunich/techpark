@@ -1,0 +1,243 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  background: $background-main;
+  font-family: $font-main;
+}
+
+.auth-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 350px;
+  margin: 0 auto;
+
+  &_db-none {
+    display: none;
+  }
+}
+
+
+.auth-login {
+  width: 100px;
+  height: 30px;
+  background: $btn-auth;
+  color: $background-auth;
+  border-radius: 5px;
+  text-align: center;
+  padding: 5px 0 0 0;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.auth-block {
+  font-size: 12px;
+  color: $font-color;
+
+  &__form {
+    position: relative;
+    margin: 0 0 15px 0;
+    background: $background-auth;
+    border-radius: 5px;
+
+    &_padding {
+      padding: 17px 65px 27px 65px;
+
+      @media(max-width:320px) {
+        padding: 30px 30px 13.5px 30px;
+      }
+    }
+  }
+
+  &__avatar-wrap {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 0 15px 0;
+
+     @media(max-width:320px) {
+        display: none;
+    }
+  }
+
+  &__avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+  }
+
+  &__close-btn {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 10px;
+    right: 10px;
+    width: 13px;
+    height: 13px;
+    text-align: center;
+    background: $btn-auth-disabled;
+    color: $background-auth;
+    border-radius: 50px;
+    overflow: hidden;
+    cursor: pointer;
+
+
+    &-shape {
+      position: relative;
+      height: 100%;
+      font-family: Tahoma;
+      font-size: 9px;
+    }
+  }
+
+  &__send {
+    display: flex;
+    position: relative;
+  }
+
+  &__register {
+    width: 100%;
+
+    &-text {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+
+  &__form-wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $font-color;
+
+    &:hover {
+      color: $btn-auth;
+    }
+
+    &_register-link {
+      color: $btn-auth;
+    }
+  }
+
+  &__input {
+    margin: 0 0 18px 0;
+  }
+
+  &__input-elem {
+    padding: 0 0 0 35px;
+    height: 100%;
+    width: 220px;
+    border: 1px solid $border-color; 
+    border-radius: 5px;
+    color: $font-color;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: Roboto;
+    
+
+    &:focus{
+      border: 1px solid $btn-auth;
+    }
+
+    &_last-child {
+      margin: 0 0 5px 0;
+    }
+
+    &-wrap {
+      position: relative;
+      margin: 0 0 10px 0;
+      height: 30px;
+    }
+
+    &-icon {
+      position: absolute;
+      padding: 7px 0 0 0;
+      height: 100%;
+      width: 30px;
+      text-align: center;
+      box-sizing: border-box;
+      border-right: 1px solid $border-color;
+    }
+
+  }
+
+  &__checkbox {
+    vertical-align: top;
+    margin: 0 3px 0 0;
+    width: 17px;
+    height: 17px;
+
+    &:not(checked) { 
+      position: absolute;
+      opacity: 0;
+    }
+
+    &:not(checked) + label.auth-block__checkbox-label {
+      position: relative; 
+      padding: 2px 0 0 52px;
+      display: block;
+      height: 30px;
+    }
+    &:not(checked) + label.auth-block__checkbox-label:before {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 0;
+      width: 40px;
+      height: 14px;
+      border-radius: 13px;
+      border-color: #CDD1DA;
+      box-shadow: #CDD1DA 0px 0px 0px 0px inset;
+      transition: border 0.4s, box-shadow 0.4s;
+      background-color: #EBECEC;
+    }
+    &:not(checked) + label.auth-block__checkbox-label:after {
+      content: '';
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 16px;
+      height: 16px;
+      border-radius: 10px;
+      background: #FFF;
+      box-shadow: 0 2px 5px rgba(0,0,0,.3);
+      transition: all .2s;
+    }
+    &:checked + label.auth-block__checkbox-label:before {
+      box-shadow: $checkbox-color 0px 0px 0px 16px inset;
+      transition: border 0.4s, box-shadow 0.4s, background-color 1.2s;
+      background-color: $checkbox-color;
+      border-color: $checkbox-color;
+    }
+    &:checked + label.auth-block__checkbox-label:after { 
+      left: 26px;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    right: 0;
+    top: -5px;
+    width: 60px;
+    height: 25px;
+    border-radius: 5px;
+    font-size: 12px;
+    background: $btn-auth;
+    color: #ffffff;
+
+    &:disabled {
+      background: $btn-auth-disabled;
+    }
+  }
+}
